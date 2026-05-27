@@ -26,17 +26,22 @@ app.get('/', async(req, res) => {
     res.send("Hooomies");
 });
 app.post('/create-payment-intent', async(req, res) => {
-
-    const paymentIntent = await stripe.paymentIntents.create({
-        amount: 100,
-        currency: "usd"
-    });
-
-    log("Client Secret Key: ", paymentIntent.client_secret);
-
-    res.json({
-        clientSecret: paymentIntent.client_secret,
-    });
+    try {
+        
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount: 100,
+            currency: "usd"
+        });
+    
+        log("Client Secret Key Generated: ", paymentIntent.client_secret);
+    
+        res.json({
+            clientSecret: paymentIntent.client_secret,
+        });
+    } catch (baderror: any) {
+        console.log("Stripe Error:", baderror.message);
+        res.status(500).json({ baderror: baderror.message });
+    }
 });
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

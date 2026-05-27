@@ -21,9 +21,22 @@ app.use(express.json());
 /**
  * ROUTE: Create PaymentIntent
  */
-const paymentIntent = await stripe.paymentIntents.create({
-    amount: 100,
-    currency: "usd"
+
+app.get('/', async(req, res) => {
+    res.send("Hooomies");
+});
+app.post('/create-payment-intent', async(req, res) => {
+
+    const paymentIntent = await stripe.paymentIntents.create({
+        amount: 100,
+        currency: "usd"
+    });
+
+    log("Client Secret Key: ", paymentIntent.client_secret);
+
+    res.json({
+        clientSecret: paymentIntent.client_secret,
+    });
 });
 
-log(paymentIntent.client_secret);
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

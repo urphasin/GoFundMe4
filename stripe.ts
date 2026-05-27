@@ -4,11 +4,11 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
-console.log(stripe);
+// console.log(stripe);
 
 
 const paymentIntent = await stripe.paymentIntents.create({
-    amount: 1,
+    amount: 100,
     currency: "usd"
 });
 

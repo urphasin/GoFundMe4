@@ -1,0 +1,28 @@
+# macOS system files
+.DS_Store
+
+# Default g++ output
+a.out
+
+# All executables (no extension)
+*.out
+*.exe
+
+# Compiled object files
+*.o
+*.obj
+
+# Static / dynamic libraries
+*.a
+*.so
+*.dylib
+
+# Debug / build folders
+build/
+bin/
+
+# VS Code
+
+node_modules/
+.env
+

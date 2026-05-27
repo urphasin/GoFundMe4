@@ -1,0 +1,95 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+StripeInvalidRequestError: You can only create new accounts if you've signed up for Connect, which you can do at https://dashboard.stripe.com/connect.
+    at generateV1Error (file:///Users/root1/projects/ai_blog_app/frontend/gofundme-next/node_modules/stripe/esm/Error.js:13:16)
+    at file:///Users/root1/projects/ai_blog_app/frontend/gofundme-next/node_modules/stripe/esm/RequestSender.js:106:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Originating from:
+    at AccountResource._makeRequest (file:///Users/root1/projects/ai_blog_app/frontend/gofundme-next/node_modules/stripe/esm/StripeResource.js:56:31)
+    at AccountResource.create (file:///Users/root1/projects/ai_blog_app/frontend/gofundme-next/node_modules/stripe/esm/resources/Accounts.js:68:21)
+    at file:///Users/root1/projects/ai_blog_app/frontend/gofundme-next/dist/stripe.js:3:39
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  type: 'StripeInvalidRequestError',
+  raw: {
+    message: "You can only create new accounts if you've signed up for Connect, which you can do at https://dashboard.stripe.com/connect.",
+    request_log_url: 'https://dashboard.stripe.com/acct_1QpaRRKQPBMqH0dw/test/workbench/logs?object=req_4Ee91jq3SgA5Zn',
+    type: 'invalid_request_error',
+    headers: {
+      server: 'nginx',
+      date: 'Wed, 27 May 2026 03:10:24 GMT',
+      'content-type': 'application/json',
+      'content-length': '322',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+      'access-control-max-age': '300',
+      'cache-control': 'no-cache, no-store',
+      'content-security-policy': "base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd; report-to csp",
+      'idempotency-key': 'stripe-node-retry-a664f37a-d85c-4285-bf86-a4de7ee24608',
+      'original-request': 'req_4Ee91jq3SgA5Zn',
+      'report-to': '{"group":"csp","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/csp-report-v2?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd&t=1"}],"include_subdomains":true}',
+      'reporting-endpoints': 'csp="https://q.stripe.com/csp-report-v2?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd&t=1"',
+      'request-id': 'req_4Ee91jq3SgA5Zn',
+      'stripe-notice': 'We recommend building your integration using Accounts v2. See https://docs.stripe.com/api/v2/core/accounts',
+      'stripe-should-retry': 'false',
+      'stripe-version': '2026-04-22.dahlia',
+      vary: 'Origin',
+      'x-stripe-priority-routing-enabled': 'true',
+      'x-stripe-routing-context-priority-tier': 'api-testmode',
+      'x-wc': '3c3',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+    },
+    statusCode: 400,
+    requestId: 'req_4Ee91jq3SgA5Zn'
+  },
+  rawType: 'invalid_request_error',
+  code: undefined,
+  doc_url: undefined,
+  param: undefined,
+  detail: undefined,
+  headers: {
+    server: 'nginx',
+    date: 'Wed, 27 May 2026 03:10:24 GMT',
+    'content-type': 'application/json',
+    'content-length': '322',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    'access-control-allow-origin': '*',
+    'access-control-expose-headers': 'Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required',
+    'access-control-max-age': '300',
+    'cache-control': 'no-cache, no-store',
+    'content-security-policy': "base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd; report-to csp",
+    'idempotency-key': 'stripe-node-retry-a664f37a-d85c-4285-bf86-a4de7ee24608',
+    'original-request': 'req_4Ee91jq3SgA5Zn',
+    'report-to': '{"group":"csp","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/csp-report-v2?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd&t=1"}],"include_subdomains":true}',
+    'reporting-endpoints': 'csp="https://q.stripe.com/csp-report-v2?q=Ye2_JCumukUHnQCpOyKPPJV-6fXpFJGW56UMJlIwtFMtk6yC6DQvUTuknBX05MVXkNYzkHyW91aiMlLd&t=1"',
+    'request-id': 'req_4Ee91jq3SgA5Zn',
+    'stripe-notice': 'We recommend building your integration using Accounts v2. See https://docs.stripe.com/api/v2/core/accounts',
+    'stripe-should-retry': 'false',
+    'stripe-version': '2026-04-22.dahlia',
+    vary: 'Origin',
+    'x-stripe-priority-routing-enabled': 'true',
+    'x-stripe-routing-context-priority-tier': 'api-testmode',
+    'x-wc': '3c3',
+    'strict-transport-security': 'max-age=63072000; includeSubDomains; preload'
+  },
+  requestId: 'req_4Ee91jq3SgA5Zn',
+  statusCode: 400,
+  userMessage: undefined,
+  charge: undefined,
+  decline_code: undefined,
+  payment_intent: undefined,
+  payment_method: undefined,
+  payment_method_type: undefined,
+  setup_intent: undefined,
+  source: undefined
+}
+
+Node.js v24.13.1
